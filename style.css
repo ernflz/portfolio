@@ -225,6 +225,7 @@
 
   .project-desc{
     font-size:14.5px;
+    justify-self:end;
     color:var(--ink-soft);
     line-height:1.85;
     max-width:48ch;
@@ -270,7 +271,7 @@
   }
 
   .image-grid div{
-    aspect-ratio:4/5;
+    aspect-ratio:4/3;
     overflow:hidden;
     background:#f2f2f0;
   }
