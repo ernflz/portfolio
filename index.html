@@ -1,15 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Title</title>
-  </head>
-  <body>
-    <h1>Hello, World!</h1>
-  </body>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">MyPortfolio</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about" class="hero">
+        <h1>Hello, I'm [Your Name]</h1>
+        <p>A passionate web developer and designer.</p>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <h2>My Work</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Project One</h3>
+                <p>A brief description of the technologies used and what this project accomplishes.</p>
+                <a href="#">View Details</a>
+            </div>
+            <div class="project-card">
+                <h3>Project Two</h3>
+                <p>A brief description of the technologies used and what this project accomplishes.</p>
+                <a href="#">View Details</a>
+            </div>
+            <div class="project-card">
+                <h3>Project Three</h3>
+                <p>A brief description of the technologies used and what this project accomplishes.</p>
+                <a href="#">View Details</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Get In Touch</h2>
+        <p>Interested in collaborating or have a question? Let's connect.</p>
+        <a href="mailto:your.email@example.com" class="btn">Email Me</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 [Your Name]. All rights reserved.</p>
+    </footer>
+</body>
 </html>
