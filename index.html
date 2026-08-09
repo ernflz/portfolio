@@ -1,57 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>eren filiz - portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">MyPortfolio</div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="about" class="hero">
-        <h1>Hello, I'm [Your Name]</h1>
-        <p>A passionate web developer and designer.</p>
-    </section>
+  <!-- =========================================
+       SIDEBAR (static)
+  ========================================== -->
+  <aside class="sidebar">
+    <div>
+      <span class="sidebar-mark"></span>
+      <a href="#about"><span class="brand-name">eren<br>filiz</span></a>
+      <p class="brand-role">Architect, Designer, Cartographer</p>
+    </div>
 
-    <section id="projects" class="projects-section">
-        <h2>My Work</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <h3>Project One</h3>
-                <p>A brief description of the technologies used and what this project accomplishes.</p>
-                <a href="#">View Details</a>
-            </div>
-            <div class="project-card">
-                <h3>Project Two</h3>
-                <p>A brief description of the technologies used and what this project accomplishes.</p>
-                <a href="#">View Details</a>
-            </div>
-            <div class="project-card">
-                <h3>Project Three</h3>
-                <p>A brief description of the technologies used and what this project accomplishes.</p>
-                <a href="#">View Details</a>
-            </div>
+    <p class="sidebar-foot">Currently in:<br>Vienna, AT</p>
+
+    <nav class="sidebar-nav" id="sidebar-nav">
+      <a href="#about" data-section="about"><span class="nav-index"></span>About</a>
+      <a href="#projects" data-section="projects"><span class="nav-index"></span>Projects</a>
+      <a href="#contact" data-section="contact"><span class="nav-index"></span>Contact</a>
+    </nav>
+  </aside>
+
+  <!-- =========================================
+       MAIN SCROLLING CONTENT
+  ========================================== -->
+  <main class="content">
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="about-grid">
+        <div class="portrait zoomable-wrap">
+          <img class="not-zoomable" src="images/eren_vienna26.jpg" alt="me">
         </div>
+        <div class="cv">
+          <p class="cv-text">Studied architecture, with a focus on designing spaces that are both unique and intentional. This sensibility naturally extends to how those spaces are represented. Over time, this drew me toward maps as a spatial representation tool in their own right, and I'm now pursuing that interest further through an Erasmus Mundus M.Sc. in Cartography.</p>
+          <p class="cv-text">Currently focused on the relationship between maps and design processes: how the way we represent space shapes the way we plan, design, and understand it.</p>
+          <p class="cv-text">Thrive in collaborative environments, exchanging ideas across disciplines, and staying curious about the shifting technological scene.</p>
+          <p class="cv-text">Also a seasoned guitarist with teaching experience.</p>
+
+          <div class="cv-meta">
+            <div><span>Focus</span>Identity, Editorial, Photography</div>
+            <div><span>Based</span>Vienna, Austria</div>
+            <div><span>Education</span>MA Visual Communication, UAL</div>
+            <div><span>Clients</span>Selected on request</div>
+          </div>
+        </div>
+        
+      </div>
     </section>
 
-    <section id="contact" class="contact-section">
-        <h2>Get In Touch</h2>
-        <p>Interested in collaborating or have a question? Let's connect.</p>
-        <a href="mailto:your.email@example.com" class="btn">Email Me</a>
+    <!-- PROJECTS -->
+    <section id="projects">
+      <p class="eyebrow">Projects</p>
+
+      <!-- Project Template 1 -->
+      <article class="project">
+        <div class="project-hero zoomable-wrap">
+          <img class="zoomable" src="images/a1_pressed_suppressed_final-1.png" alt="pressed/suppressed">
+        </div>
+        <div class="project-body">
+          <div class="project-text">
+            <p class="project-title">pressed/suppressed</p>
+            <p class="project-meta">A1 Print Map — 2026</p>
+            <p class="project-desc">A visual identity built around the shifting geometry of riverbanks — a mark that redraws itself depending on scale, printed across signage, print and a modular type system.</p>
+          </div>
+          <div class="project-images">
+            <div class="zoomable-wrap"><img class="zoomable" src="images/a1_pressed_suppressed_final-1.png" alt="River Line detail, wide"></div>
+            <div class="zoomable-wrap"><img class="zoomable" src="https://picsum.photos/id/1018/700/700" alt="River Line detail one"></div>
+            <div class="zoomable-wrap"><img class="zoomable" src="https://picsum.photos/id/1020/700/700" alt="River Line detail two"></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project Template 2 -->
+      <article class="project">
+        <div class="project-hero zoomable-wrap">
+          <img class="zoomable" src="images/carta urla 43.png" alt="Carta Urla">
+        </div>
+        <div class="project-body">
+          <div class="project-text">
+            <p class="project-title">Carta Urla</p>
+            <p class="project-meta">Architectural Graduation Project — 2024</p>
+            <p class="project-desc">A quarterly print publication on independent research. Typeset for long-form reading, with a folded insert map that unfolds across the spread for each issue's field site.</p>
+          </div>
+          <div class="project-images">
+            <div class="zoomable-wrap"><img class="zoomable" src="https://picsum.photos/id/1040/1200/700" alt="Fieldnotes detail, wide"></div>
+            <div class="zoomable-wrap"><img class="zoomable" src="https://picsum.photos/id/1043/700/700" alt="Fieldnotes detail one"></div>
+            <div class="zoomable-wrap"><img class="zoomable" src="https://picsum.photos/id/1044/700/700" alt="Fieldnotes detail two"></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Grid Section 1 -->
+      <div class="grid-section">
+        <h3 class="grid-title">Selected Works</h3>
+        <div class="image-grid">
+          <div class="zoomable-wrap"><img class="zoomable" src="https://picsum.photos/id/1050/800/1000" alt="Selected work 01"></div>
+          <div class="zoomable-wrap"><img class="zoomable" src="https://picsum.photos/id/1053/800/1000" alt="Selected work 02"></div>
+          <div class="zoomable-wrap"><img class="zoomable" src="https://picsum.photos/id/1056/800/1000" alt="Selected work 03"></div>
+          <div class="zoomable-wrap"><img class="zoomable" src="https://picsum.photos/id/1060/800/1000" alt="Selected work 04"></div>
+        </div>
+      </div>
+
+      <!-- Grid Section 2 -->
+      <div class="grid-section">
+        <h3 class="grid-title">Studies &amp; Fragments</h3>
+        <div class="image-grid">
+          <div class="zoomable-wrap"><img class="zoomable" src="https://picsum.photos/id/1062/800/1000" alt="Study 01"></div>
+          <div class="zoomable-wrap"><img class="zoomable" src="https://picsum.photos/id/1067/800/1000" alt="Study 02"></div>
+          <div class="zoomable-wrap"><img class="zoomable" src="https://picsum.photos/id/1074/800/1000" alt="Study 03"></div>
+          <div class="zoomable-wrap"><img class="zoomable" src="https://picsum.photos/id/1080/800/1000" alt="Study 04"></div>
+        </div>
+      </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 [Your Name]. All rights reserved.</p>
-    </footer>
+    <!-- CONTACT -->
+    <section id="contact">
+      <p class="eyebrow">Contact</p>
+      <h2>mail me.</h2>
+      <a class="contact-email" href="mailto:efiliz.psd@gmail.com">efiliz.psd@gmail.com</a>
+
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/eren-filiz/" target="_blank" rel="noopener">
+          LinkedIn
+        </a>
+        <a href="https://www.instagram.com/archandtunes/" target="_blank" rel="noopener">
+          Instagram
+        </a>
+        <a href="https://www.behance.net/erenfiliz" target="_blank" rel="noopener">
+          Behance
+        </a>
+        <a href="https://x.com/" target="_blank" rel="noopener">
+          X
+        </a>
+      </div>
+
+      <p class="footer-note">
+        <span>© 2026 Eren Filiz</span>
+      </p>
+    </section>
+
+  </main>
+
+  <!-- =========================================
+       LIGHTBOX
+  ========================================== -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightbox-close">✕ Close</button>
+    <img id="lightbox-img" src="" alt="">
+    <p class="lightbox-caption" id="lightbox-caption"></p>
+  </div>
+ 
+  <script>
+  // ---------- Lightbox / zoom & pan ----------
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxCaption = document.getElementById('lightbox-caption');
+  const closeBtn = document.getElementById('lightbox-close');
+
+  const MIN_SCALE = 1;
+  const MAX_SCALE = 4;
+  const SCALE_STEP = 0.15;
+  
+  let currentScale = 1;
+  let translateX = 0;
+  let translateY = 0;
+  let isDragging = false;
+  let startX = 0;
+  let startY = 0;
+  let hasDragged = false;
+
+  function updateTransform() {
+    lightboxImg.style.transform = `translate(${translateX}px, ${translateY}px) scale(${currentScale})`;
+    if (currentScale > MIN_SCALE) {
+      lightboxImg.style.cursor = isDragging ? 'grabbing' : 'grab';
+    } else {
+      lightboxImg.style.cursor = 'zoom-in';
+    }
+  }
+
+  function setScale(scale) {
+    currentScale = Math.min(MAX_SCALE, Math.max(MIN_SCALE, scale));
+    if (currentScale === MIN_SCALE) {
+      translateX = 0;
+      translateY = 0;
+    }
+    updateTransform();
+  }
+
+  document.querySelectorAll('.zoomable').forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src.replace(/\/\d+\/\d+$/, m => m); 
+      lightboxImg.alt = img.alt;
+      lightboxCaption.textContent = img.alt || '';
+      setScale(1);
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+    setScale(1);
+  }
+
+  closeBtn.addEventListener('click', closeLightbox);
+  
+  lightbox.addEventListener('click', e => { 
+    if (e.target === lightbox) closeLightbox(); 
+  });
+
+  // Drag to pan logic
+  lightboxImg.addEventListener('mousedown', (e) => {
+    if (currentScale > MIN_SCALE) {
+      isDragging = true;
+      hasDragged = false;
+      startX = e.clientX - translateX;
+      startY = e.clientY - translateY;
+      e.preventDefault(); 
+    }
+  });
+
+  window.addEventListener('mousemove', (e) => {
+    if (isDragging) {
+      hasDragged = true;
+      translateX = e.clientX - startX;
+      translateY = e.clientY - startY;
+      updateTransform();
+    }
+  });
+
+  window.addEventListener('mouseup', () => {
+    if (isDragging) {
+      isDragging = false;
+      updateTransform();
+    }
+  });
+
+  // Handle clicking to zoom out or close
+  lightboxImg.addEventListener('click', () => {
+    if (hasDragged) {
+      hasDragged = false; // Prevent click action if a drag just finished
+      return;
+    }
+    if (currentScale > MIN_SCALE) {
+      setScale(1);
+    } else {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener('keydown', e => { 
+    if (e.key === 'Escape') closeLightbox(); 
+  });
+
+  lightbox.addEventListener('wheel', e => {
+    if (!lightbox.classList.contains('open')) return;
+    e.preventDefault();
+    const delta = e.deltaY > 0 ? -SCALE_STEP : SCALE_STEP;
+    setScale(currentScale + delta);
+  }, { passive: false });
+
+  // ---------- Active nav highlighting ----------
+  const navLinks = document.querySelectorAll('.sidebar-nav a');
+  const sections = document.querySelectorAll('main section[id]');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(link => {
+          link.classList.toggle('active', link.dataset.section === entry.target.id);
+        });
+      }
+    });
+  }, { rootMargin: '-50% 0px -50% 0px', threshold: 0 });
+
+  sections.forEach(section => observer.observe(section));
+</script>
+
 </body>
 </html>
