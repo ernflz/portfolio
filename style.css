@@ -75,6 +75,13 @@
     display:block;
   }
 
+  .brand-name2,
+  .brand-name3,
+  .brand-name4{
+    opacity: 90%;
+  }
+
+
   /* main, front-most name — solid ink */
   .brand-name{
     position:relative;
@@ -529,6 +536,12 @@
     line-height:1.35;
     display:block;
   }
+  
+    .brand-name2,
+    .brand-name3,
+    .brand-name4{
+      opacity: 70%;
+    }
     .sidebar-nav{display:grid; grid-template-columns:1fr 1fr; gap: 5px; }
     .nav-index{display:none; text-align: center;}
     .content{margin-left:0; margin-top:64px;}
