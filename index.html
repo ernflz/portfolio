@@ -194,13 +194,13 @@ in cartographic style as a design and political choice.
     <p class="lightbox-caption" id="lightbox-caption"></p>
   </div>
  
-  <script>
+ <script>
   // ---------- Lightbox / zoom & pan ----------
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightbox-img');
   const lightboxCaption = document.getElementById('lightbox-caption');
   const closeBtn = document.getElementById('lightbox-close');
-
+ 
   const MIN_SCALE = 1;
   const MAX_SCALE = 4;
   const SCALE_STEP = 0.15;
@@ -212,7 +212,7 @@ in cartographic style as a design and political choice.
   let startX = 0;
   let startY = 0;
   let hasDragged = false;
-
+ 
   function updateTransform() {
     lightboxImg.style.transform = `translate(${translateX}px, ${translateY}px) scale(${currentScale})`;
     if (currentScale > MIN_SCALE) {
@@ -221,7 +221,7 @@ in cartographic style as a design and political choice.
       lightboxImg.style.cursor = 'zoom-in';
     }
   }
-
+ 
   function setScale(scale) {
     currentScale = Math.min(MAX_SCALE, Math.max(MIN_SCALE, scale));
     if (currentScale === MIN_SCALE) {
@@ -230,7 +230,7 @@ in cartographic style as a design and political choice.
     }
     updateTransform();
   }
-
+ 
   document.querySelectorAll('.zoomable').forEach(img => {
     img.addEventListener('click', () => {
       lightboxImg.src = img.src.replace(/\/\d+\/\d+$/, m => m); 
@@ -241,19 +241,19 @@ in cartographic style as a design and political choice.
       document.body.style.overflow = 'hidden';
     });
   });
-
+ 
   function closeLightbox() {
     lightbox.classList.remove('open');
     document.body.style.overflow = '';
     setScale(1);
   }
-
+ 
   closeBtn.addEventListener('click', closeLightbox);
   
   lightbox.addEventListener('click', e => { 
     if (e.target === lightbox) closeLightbox(); 
   });
-
+ 
   // Drag to pan logic
   lightboxImg.addEventListener('mousedown', (e) => {
     if (currentScale > MIN_SCALE) {
@@ -264,7 +264,7 @@ in cartographic style as a design and political choice.
       e.preventDefault(); 
     }
   });
-
+ 
   window.addEventListener('mousemove', (e) => {
     if (isDragging) {
       hasDragged = true;
@@ -273,14 +273,14 @@ in cartographic style as a design and political choice.
       updateTransform();
     }
   });
-
+ 
   window.addEventListener('mouseup', () => {
     if (isDragging) {
       isDragging = false;
       updateTransform();
     }
   });
-
+ 
   // Handle clicking to zoom out or close
   lightboxImg.addEventListener('click', () => {
     if (hasDragged) {
@@ -293,22 +293,22 @@ in cartographic style as a design and political choice.
       closeLightbox();
     }
   });
-
+ 
   document.addEventListener('keydown', e => { 
     if (e.key === 'Escape') closeLightbox(); 
   });
-
+ 
   lightbox.addEventListener('wheel', e => {
     if (!lightbox.classList.contains('open')) return;
     e.preventDefault();
     const delta = e.deltaY > 0 ? -SCALE_STEP : SCALE_STEP;
     setScale(currentScale + delta);
   }, { passive: false });
-
+ 
   // ---------- Active nav highlighting ----------
   const navLinks = document.querySelectorAll('.sidebar-nav a');
   const sections = document.querySelectorAll('main section[id]');
-
+ 
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -318,7 +318,7 @@ in cartographic style as a design and political choice.
       }
     });
   }, { rootMargin: '-50% 0px -50% 0px', threshold: 0 });
-
+ 
   sections.forEach(section => observer.observe(section));
 </script>
 
