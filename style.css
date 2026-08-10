@@ -503,12 +503,15 @@
     line-height:1.35;
     display:block;
   }
-    .sidebar-nav{flex-direction:row; gap:18px;}
-    .nav-index{display:none;}
+    .sidebar-nav{display:grid; grid-template-columns:1fr 1fr; gap: 5px; }
+    .nav-index{display:none; text-align: center;}
     .content{margin-left:0; margin-top:64px;}
     .about-grid, .project-body{grid-template-columns:1fr; gap:32px;}
     .portrait{width:120px; justify-self: start; aspect-ratio:1/1; order:-1; margin-top: 10px; margin-left: 10px; margin-bottom:10px; }
     .image-grid{grid-template-columns:1fr 1fr;}
     section{padding:56px 20px;}
     .contact h2{font-size:26px;}
+    .contact-grid{
+      display:block;
   }
+}
