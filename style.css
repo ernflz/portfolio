@@ -51,12 +51,65 @@
     background:var(--bg);
   }
 
-  .brand-name{
-    font-size:30px;
+  /* ---------------------------------------------
+     BRAND NAME — layered underlay effect
+  --------------------------------------------- */
+  .brand-link{
+    display:inline-block;
+  }
+
+  .brand-stack{
+    position:relative;
+    display:inline-block;
+    margin-bottom:6px;
+  }
+
+  .brand-name,
+  .brand-name2,
+  .brand-name3,
+  .brand-name4{
+    font-size:40px;
     font-weight:500;
     letter-spacing:0.01em;
     line-height:1.35;
     display:block;
+  }
+
+  /* main, front-most name — solid ink */
+  .brand-name{
+    position:relative;
+    z-index:3;
+    color:var(--ink);
+    font-weight: 700;
+  }
+
+  /* first underlay — shifted right/down, olive */
+  .brand-name2{
+    position:absolute;
+    bottom:7px;
+    left:7px;
+    z-index:2;
+    color:var(--accent);
+    pointer-events:none;
+  }
+
+  /* second underlay — shifted further right/down, rust */
+  .brand-name3{
+    position:absolute;
+    top:8px;
+    right:8px;
+    z-index:1;
+    color:#d09379;
+    pointer-events:none;
+  }
+
+   .brand-name4{
+    position:absolute;
+    top:10px;
+    left:10px;
+    z-index:1;
+    color:#7b86df;
+    pointer-events:none;
   }
 
   .brand-role{
@@ -270,13 +323,27 @@
     gap:2px;
   }
 
+  .image-grid2{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:2px;
+  }
+
   .image-grid div{
     aspect-ratio:4/3;
     overflow:hidden;
     background:#f2f2f0;
   }
 
+  .image-grid2 div{
+    aspect-ratio:4/3;
+    overflow:hidden;
+    background:#f2f2f0;
+  }
+
   .image-grid img{width:100%; height:100%; object-fit:cover;}
+
+  .image-grid2 img{width:100%; height:100%; object-fit:cover;}
 
   /* ---------------------------------------------
      ZOOMABLE IMAGES
@@ -293,14 +360,29 @@
   .contact{
     border-top:1px solid var(--hairline);
   }
-
+ 
+  .contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:0;
+    align-items:center;
+  }
+ 
+  .contact-image{
+    aspect-ratio:3/2;
+    overflow:hidden;
+    background:#f2f2f0;
+  }
+ 
+  .contact-image img{width:100%; height:100%; object-fit:cover;}
+ 
   .contact h2{
     font-size:34px;
     font-weight:500;
     letter-spacing:-0.01em;
     margin:6px 0 36px;
   }
-
+ 
   .contact-email{
     display:inline-block;
     font-size:16px;
@@ -308,16 +390,16 @@
     border-bottom:1px solid var(--ink);
     transition:color .2s ease, border-color .2s ease;
   }
-
+ 
   .contact-email:hover{color:var(--accent); border-color:var(--accent);}
-
+ 
   .socials{
     display:flex;
     gap:28px;
     margin-top:56px;
     flex-wrap:wrap;
   }
-
+ 
   .socials a{
     display:flex;
     align-items:center;
@@ -328,10 +410,10 @@
     color:var(--ink-soft);
     transition:color .2s ease;
   }
-
+ 
   .socials a:hover{color:var(--accent);}
   .socials svg{width:16px; height:16px; fill:currentColor;}
-
+ 
   .footer-note{
     margin-top:90px;
     font-size:11.5px;
