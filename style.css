@@ -214,8 +214,7 @@
 
   .cv-meta{
     margin-top:40px;
-    display:grid;
-    grid-template-columns:1fr 1fr;
+    display:flex;
     gap:18px 24px;
     border-top:1px solid var(--hairline);
     padding-top:24px;
@@ -494,6 +493,16 @@
     }
     .sidebar-foot{display:none;}
     .brand-role{display:none;}
+    .brand-name,
+    .brand-name2,
+    .brand-name3,
+    .brand-name4{
+    font-size:30px;
+    font-weight:500;
+    letter-spacing:0.01em;
+    line-height:1.35;
+    display:block;
+  }
     .sidebar-nav{flex-direction:row; gap:18px;}
     .nav-index{display:none;}
     .content{margin-left:0; margin-top:64px;}
