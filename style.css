@@ -7,7 +7,7 @@
     --ink-soft:#55555a;
     --muted:#9a9a9a;
     --hairline:#e6e6e3;
-    --accent:#a2b65a;
+    --accent:#c2c455;
     --accent-tint:rgba(162,182,90,0.12);
     --sidebar-w:15vw;
     --gutter:clamp(24px, 4vw, 64px);
@@ -99,7 +99,7 @@
     top:8px;
     right:8px;
     z-index:1;
-    color:#d09379;
+    color:#c4559a;
     pointer-events:none;
   }
 
@@ -108,7 +108,7 @@
     top:10px;
     left:10px;
     z-index:1;
-    color:#7b86df;
+    color:#55c0c4;
     pointer-events:none;
   }
 
@@ -474,6 +474,32 @@
   letter-spacing:0.04em;
   pointer-events:none;
 }
+
+.lightbox-prev, .lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #f2f2f0;
+  font-size: 32px;
+  cursor: pointer;
+  z-index: 201;
+  padding: 20px;
+  transition: color 0.2s ease;
+}
+
+.lightbox-prev {
+  left: 10px;
+}
+
+.lightbox-next {
+  right: 10px;
+}
+
+.lightbox-prev:hover, .lightbox-next:hover {
+  color: var(--accent);
+}  
 
   /* ---------------------------------------------
      RESPONSIVE
